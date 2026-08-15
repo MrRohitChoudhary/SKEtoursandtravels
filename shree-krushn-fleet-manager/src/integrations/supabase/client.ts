@@ -34,13 +34,15 @@ function createSupabaseClient() {
     import.meta.env['VITE_SUPABASE_URL'] ||
     import.meta.env['SUPABASE_URL'] ||
     process.env['SUPABASE_URL'] ||
-    process.env['VITE_SUPABASE_URL'];
+    process.env['VITE_SUPABASE_URL'] ||
+    'https://ruzdhyvdjgzttovvjuiq.supabase.co';
 
   const SUPABASE_PUBLISHABLE_KEY =
     import.meta.env['VITE_SUPABASE_PUBLISHABLE_KEY'] ||
     import.meta.env['SUPABASE_PUBLISHABLE_KEY'] ||
     process.env['SUPABASE_PUBLISHABLE_KEY'] ||
-    process.env['VITE_SUPABASE_PUBLISHABLE_KEY'];
+    process.env['VITE_SUPABASE_PUBLISHABLE_KEY'] ||
+    'sb_publishable_V8OCFpVkpvmxfzC_ZM2XqA_wiuOejJ4';
 
   if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
     const missing = [
